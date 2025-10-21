@@ -8,7 +8,7 @@ Semua data tersimpan secara **persisten** menggunakan `localStorage`.
 
 ## 🚀 Fitur Utama
 
-### 🟢 1. Tambah Buku Baru
+### 1. Tambah Buku Baru
 Masukkan judul, penulis, tahun, dan centang jika buku sudah selesai dibaca.  
 Data akan langsung tampil di rak sesuai statusnya.
 
@@ -17,7 +17,7 @@ Data akan langsung tampil di rak sesuai statusnya.
 
 ---
 
-### 🟣 2. Cari Buku
+### 2. Cari Buku
 Masukkan judul buku di kolom pencarian untuk menemukan buku dengan cepat.
 
 📸 **Tampilan Fitur Cari Buku**
@@ -25,7 +25,7 @@ Masukkan judul buku di kolom pencarian untuk menemukan buku dengan cepat.
 
 ---
 
-### 🔵 3. Pindah Rak Buku
+### 3. Pindah Rak Buku
 Ubah status buku dari *Belum Selesai Dibaca* menjadi *Selesai Dibaca*, atau sebaliknya hanya dengan satu klik tombol.
 
 📸 **Tampilan Rak Buku**
