@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom right, #e0f7fa, #e1bee7);
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+header {
+  background: #6a1b9a;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+section form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.8rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
+section form:hover {
+  transform: translateY(-3px);
+}
+
+section form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+section form label {
+  font-weight: 600;
+  color: #4a148c;
+}
+
+section form input[type="text"],
+section form input[type="number"] {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  transition: 0.3s all;
+}
+
+section form input:focus {
+  border-color: #6a1b9a;
+  box-shadow: 0 0 8px rgba(106, 27, 154, 0.5);
+  outline: none;
+}
+
+section form button {
+  align-self: flex-start;
+  background: #6a1b9a;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1.3rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+section form button:hover {
+  background: #4a148c;
+  transform: scale(1.05);
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #4a148c;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+#incompleteBookList,
+#completeBookList {
+  display: grid;
+  gap: 1rem;
+}
+
+[data-testid="bookItem"] {
+  background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+  padding: 1.2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+[data-testid="bookItem"]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+[data-testid="bookItem"] h3 {
+  color: #6a1b9a;
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+[data-testid="bookItem"] p {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  color: #4a148c;
+}
+
+[data-testid="bookItem"] div {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+[data-testid="bookItem"] button {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+[data-testid="bookItemIsCompleteButton"] {
+  background-color: #00c853;
+  color: white;
+}
+
+[data-testid="bookItemIsCompleteButton"]:hover {
+  background-color: #009624;
+}
+
+[data-testid="bookItemDeleteButton"] {
+  background-color: #d50000;
+  color: white;
+}
+
+[data-testid="bookItemDeleteButton"]:hover {
+  background-color: #9b0000;
+}
+
+[data-testid="bookItemEditButton"] {
+  background-color: #ffd600;
+  color: #333;
+}
+
+[data-testid="bookItemEditButton"]:hover {
+  background-color: #ffea00;
+}
+
+@media (max-width: 600px) {
+  section form {
+    padding: 1.2rem;
+  }
+
+  [data-testid="bookItem"] {
+    padding: 1rem;
+  }
+
+  [data-testid="bookItem"] div {
+    flex-direction: column;
+  }
+}
